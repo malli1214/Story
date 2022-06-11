@@ -1,0 +1,229 @@
+
+working directory :: story
+ staging area :: git init and using it
+local Repository : git commit and adding files and getting files back to working directory
+
+
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop
+$ cd story
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story
+$ git init
+Initialized empty Git repository in C:/Users/marju/OneDrive/Desktop/story/.git/
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ ls
+chapter1.txt
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/marju/OneDrive/Desktop/story/.git/
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ ls
+chapter1.txt
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git add chapter1.txt
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git commit -m "Complete chapter 1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'marju@Mallikarjuna.(none)')
+
+git: 'configure' is not a git command. See 'git --help'.
+
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git configure --global user.email "marjunbn14@gmail.com"
+git: 'configure' is not a git command. See 'git --help'.
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ touch chapter2.txt
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ touch chapter3.txt
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git config --global user.email "marjunbn14@gmail.com"
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git config --global user.name "B N Mallikarjuna"
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git commit -m "Complete chapter 1"
+[master (root-commit) 5203fc6] Complete chapter 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git add .
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git commit -m  "Complete chapter 2 and chapter 3"
+[master afddbca] Complete chapter 2 and chapter 3
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git log
+commit afddbcab4849f1b9c0b59e687cc698be5f5e797f (HEAD -> master)
+Author: B N Mallikarjuna <marjunbn14@gmail.com>
+Date:   Thu Jun 9 15:31:50 2022 +0530
+
+    Complete chapter 2 and chapter 3
+
+commit 5203fc67d193b8e78b75d1108afc91aa40d5e7f0
+Author: B N Mallikarjuna <marjunbn14@gmail.com>
+Date:   Thu Jun 9 15:28:37 2022 +0530
+
+    Complete chapter 1
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$  git diff chapter3.tsx
+fatal: ambiguous argument 'chapter3.tsx': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index e69de29..70d7bcf 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -0,0 +1 @@
++sdfjhhfdblj v kjhvnnc
+\ No newline at end of file
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git checkout chapter3.txt
+Updated 1 path from the index
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git diff chapter3.txt
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git checkout  chapter3.txt
+Updated 0 paths from the index
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git log
+commit afddbcab4849f1b9c0b59e687cc698be5f5e797f (HEAD -> master)
+Author: B N Mallikarjuna <marjunbn14@gmail.com>
+Date:   Thu Jun 9 15:31:50 2022 +0530
+
+    Complete chapter 2 and chapter 3
+
+commit 5203fc67d193b8e78b75d1108afc91aa40d5e7f0
+Author: B N Mallikarjuna <marjunbn14@gmail.com>
+Date:   Thu Jun 9 15:28:37 2022 +0530
+
+    Complete chapter 1
+
+marju@Mallikarjuna MINGW64 ~/Onedrive/Desktop/story (master)
+$ git checkout chapter3.txt
+Updated 0 paths from the index
+
